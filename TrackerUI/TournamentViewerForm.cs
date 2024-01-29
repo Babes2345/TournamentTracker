@@ -16,5 +16,25 @@ namespace TrackerUI
         {
             InitializeComponent();
         }
+
+        private void unplayedOnlyCheckbox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teamonelabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void teamTwoLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
