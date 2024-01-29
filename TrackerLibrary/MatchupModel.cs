@@ -22,3 +22,4 @@ namespace TrackerLibrary
         /// </summary>
         public int MatchupRound { get; set; }
     }
+}
