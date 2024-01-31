@@ -34,7 +34,7 @@
             selectTeamMemberDropDown = new ComboBox();
             selectTeamMemberLabel = new Label();
             addTeamMemberButton = new Button();
-            groupBox1 = new GroupBox();
+            addNewMemberGroupBox = new GroupBox();
             firstNameValue = new TextBox();
             firstNameLabel = new Label();
             lastNameValue = new TextBox();
@@ -47,7 +47,7 @@
             teamMembersListBox = new ListBox();
             deleteSelectedMemberButton = new Button();
             createTeamButton = new Button();
-            groupBox1.SuspendLayout();
+            addNewMemberGroupBox.SuspendLayout();
             SuspendLayout();
             // 
             // teamNameValue
@@ -109,25 +109,25 @@
             addTeamMemberButton.Text = "Add Member";
             addTeamMemberButton.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
+            // addNewMemberGroupBox
             // 
-            groupBox1.Controls.Add(createMemberButton);
-            groupBox1.Controls.Add(cellphoneValue);
-            groupBox1.Controls.Add(cellphoneLabel);
-            groupBox1.Controls.Add(emailValue);
-            groupBox1.Controls.Add(emailLabel);
-            groupBox1.Controls.Add(lastNameValue);
-            groupBox1.Controls.Add(lastNameLabel);
-            groupBox1.Controls.Add(firstNameValue);
-            groupBox1.Controls.Add(firstNameLabel);
-            groupBox1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox1.ForeColor = SystemColors.MenuHighlight;
-            groupBox1.Location = new Point(33, 321);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(422, 358);
-            groupBox1.TabIndex = 19;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Add New Member";
+            addNewMemberGroupBox.Controls.Add(createMemberButton);
+            addNewMemberGroupBox.Controls.Add(cellphoneValue);
+            addNewMemberGroupBox.Controls.Add(cellphoneLabel);
+            addNewMemberGroupBox.Controls.Add(emailValue);
+            addNewMemberGroupBox.Controls.Add(emailLabel);
+            addNewMemberGroupBox.Controls.Add(lastNameValue);
+            addNewMemberGroupBox.Controls.Add(lastNameLabel);
+            addNewMemberGroupBox.Controls.Add(firstNameValue);
+            addNewMemberGroupBox.Controls.Add(firstNameLabel);
+            addNewMemberGroupBox.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            addNewMemberGroupBox.ForeColor = SystemColors.MenuHighlight;
+            addNewMemberGroupBox.Location = new Point(33, 321);
+            addNewMemberGroupBox.Name = "addNewMemberGroupBox";
+            addNewMemberGroupBox.Size = new Size(422, 358);
+            addNewMemberGroupBox.TabIndex = 19;
+            addNewMemberGroupBox.TabStop = false;
+            addNewMemberGroupBox.Text = "Add New Member";
             // 
             // firstNameValue
             // 
@@ -258,7 +258,7 @@
             Controls.Add(createTeamButton);
             Controls.Add(deleteSelectedMemberButton);
             Controls.Add(teamMembersListBox);
-            Controls.Add(groupBox1);
+            Controls.Add(addNewMemberGroupBox);
             Controls.Add(addTeamMemberButton);
             Controls.Add(selectTeamMemberDropDown);
             Controls.Add(selectTeamMemberLabel);
@@ -270,8 +270,9 @@
             Margin = new Padding(5, 6, 5, 6);
             Name = "CreateTeamForm";
             Text = "Create Team";
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            Load += CreateTeamForm_Load;
+            addNewMemberGroupBox.ResumeLayout(false);
+            addNewMemberGroupBox.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -284,7 +285,7 @@
         private ComboBox selectTeamMemberDropDown;
         private Label selectTeamMemberLabel;
         private Button addTeamMemberButton;
-        private GroupBox groupBox1;
+        private GroupBox addNewMemberGroupBox;
         private Button createMemberButton;
         private TextBox cellphoneValue;
         private Label cellphoneLabel;
