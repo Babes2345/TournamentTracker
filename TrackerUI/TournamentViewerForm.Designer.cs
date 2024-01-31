@@ -36,7 +36,7 @@
             matchupListBox = new ListBox();
             teamOnelabel = new Label();
             teamTwoLabel = new Label();
-            teamTneScoreLabel = new Label();
+            teamOneScoreLabel = new Label();
             teamOneScoreValue = new TextBox();
             teamTwoScoreValue = new TextBox();
             teamTwoScoreLabel = new Label();
@@ -124,14 +124,15 @@
             teamTwoLabel.Text = "<team two>";
             teamTwoLabel.Click += teamTwoLabel_Click;
             // 
-            // teamTneScoreLabel
+            // teamOneScoreLabel
             // 
-            teamTneScoreLabel.AutoSize = true;
-            teamTneScoreLabel.Location = new Point(366, 200);
-            teamTneScoreLabel.Name = "teamTneScoreLabel";
-            teamTneScoreLabel.Size = new Size(64, 30);
-            teamTneScoreLabel.TabIndex = 8;
-            teamTneScoreLabel.Text = "Score";
+            teamOneScoreLabel.AutoSize = true;
+            teamOneScoreLabel.Location = new Point(366, 200);
+            teamOneScoreLabel.Name = "teamOneScoreLabel";
+            teamOneScoreLabel.Size = new Size(64, 30);
+            teamOneScoreLabel.TabIndex = 8;
+            teamOneScoreLabel.Text = "Score";
+            teamOneScoreLabel.Click += teamTneScoreLabel_Click;
             // 
             // teamOneScoreValue
             // 
@@ -193,7 +194,7 @@
             Controls.Add(teamTwoScoreValue);
             Controls.Add(teamTwoScoreLabel);
             Controls.Add(teamOneScoreValue);
-            Controls.Add(teamTneScoreLabel);
+            Controls.Add(teamOneScoreLabel);
             Controls.Add(teamTwoLabel);
             Controls.Add(teamOnelabel);
             Controls.Add(matchupListBox);
@@ -221,7 +222,7 @@
         private ListBox matchupListBox;
         private Label teamOnelabel;
         private Label teamTwoLabel;
-        private Label teamTneScoreLabel;
+        private Label teamOneScoreLabel;
         private TextBox teamOneScoreValue;
         private TextBox teamTwoScoreValue;
         private Label teamTwoScoreLabel;

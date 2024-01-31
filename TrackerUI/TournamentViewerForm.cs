@@ -36,5 +36,10 @@ namespace TrackerUI
         {
 
         }
+
+        private void teamTneScoreLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
